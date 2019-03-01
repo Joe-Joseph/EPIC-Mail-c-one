@@ -1,0 +1,306 @@
+body{
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+    font-size: 15px;
+    font-family: 'Rasa', serif;
+}
+
+.container{
+    width: 100%;
+    margin: auto;
+   overflow: hidden;
+}
+
+header {
+    background: #10151c;
+    color: #fff;
+    width: 100%;
+    margin-top: 0;
+    z-index: 1;
+}
+
+header #profile{
+    float: left;
+}
+
+header #profileImg {
+    text-decoration: none;
+    display: inline;
+}
+
+header #userName{
+    display: inline-block;
+    margin: 0 0 0 10px;
+}
+
+header #userName h5{
+    font-size: 14px;
+    font-weight: 300;
+    margin-bottom: 0;
+    margin-top: 15px;
+}
+
+header #userName a {
+    color: #fff;
+    text-decoration: none;
+}
+
+header nav{
+    float: right;
+    height: 30px;
+}
+
+.nav-inbox {
+    background:#202226;
+    font-size: 20px;
+    line-height: 80px;
+    display: inline-block;
+    margin-top: 0;
+    padding: 0;
+    width: 215px;
+    position: fixed;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.nav-inbox li{
+    display: block;
+    line-height: 60px;
+    width: 100%;
+    z-index: 1;
+}
+
+.nav-inbox li a{
+    text-decoration: none;
+    color: white;
+}
+
+.table-inbox{
+  width: 83%;
+  float: right;
+  margin-top: 0;
+  z-index: 1;
+  border: 1px solid #eee;
+  box-shadow: 0 2px 2px #ccc;
+  padding-bottom: 30px;
+  margin-right: 0;
+}
+
+table{
+    width: 100%;
+}
+
+td{
+    padding-right: 50px;
+    padding-left: 50px;
+    height: 36px;
+    vertical-align: middle;
+    border-bottom: 1px solid #ddd;
+}
+
+.table-inbox .mail-view-date{
+    text-align: right;
+}
+
+.table-inbox .mail-view a{
+    display: block;
+    text-decoration: none;
+    color: black;
+}
+
+.table-inbox .mail-view-date a{
+    display: block;
+    text-decoration: none;
+    color: black;
+}
+
+tr:hover {
+    background-color: #f5f5f5;
+}
+
+.table-inbox input[type=text], select, textarea {
+    width: 74%; 
+    padding: 12px; 
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+    box-sizing: border-box; 
+    margin-top: 6px; 
+    margin-bottom: 16px; 
+    resize: vertical 
+  }
+  
+ 
+  .table-inbox input[type=submit] {
+    background: linear-gradient(rgba(1, 0, 7, 0.9), rgba(2, 0, 8, 0.9));
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    margin-right: 50px;
+    margin-top: 15px;
+  }
+  
+ 
+  .table-inbox input[type=submit]:hover {
+    background-color: black;
+  }
+
+  .table-inbox form{
+    margin-left: 50px;
+    margin-top: 30px;
+
+  }
+  
+ nav .nav-items{
+     float: right;
+     margin-left: 40px;
+     height: 40px;
+ }
+
+ nav ul{
+     margin: 0;
+     padding: 0;
+     float: right;
+     list-style: none;
+ }
+ .nav-items{
+    color: white;
+    text-decoration: none;
+    padding: 22px 20px;
+ }
+
+ .nav-items:hover{
+     background-color: #444;
+ }
+
+ .nav-content{
+     position: absolute;
+     top: 57px;
+     color:white;
+     overflow: hidden;
+     background-color: #202226;
+     width: 8%;
+     max-height: 0px;
+
+ }
+ .nav-content a{
+    color: white;
+    text-decoration: none;
+    padding-right: 30px;
+ }
+
+ .nav-content a:hover{
+    color:gray;
+ }
+
+ .nav-sub{
+     padding-top: 10px;
+ }
+
+ .nav-sub ul li a{
+    display: inline;
+    line-height: 20px;
+    padding-top: 5px;
+ }
+
+ .nav-items:focus{
+    background-color: #444;
+ }
+ .nav-items:focus ~ .nav-content{
+     max-height: 400px;
+ }
+
+.group{
+    border: 3px solid #eee;
+    box-shadow: 0 2px 2px #ccc;
+    border-radius: 4px;
+    margin-left: 30%;
+    margin-top: 13%;
+    width: 40%;
+    padding: 20px 10px;
+    text-align: center;
+}
+
+.group input[type=text]{
+    width: 100%; 
+    padding: 12px; 
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+    box-sizing: border-box; 
+    margin-top: 6px; 
+    margin-bottom: 16px; 
+    resize: vertical 
+  }
+
+  .group .createGroup{
+    width: 100%;
+    padding: 10px 20px;
+    border-radius: 50px;
+    border: none;
+    color: white;
+    font-family: 'Rasa', serif;
+    font-size: 18px;
+    margin-top: 20px;
+    background:  #202226;
+    resize: vertical;
+}
+
+.save{
+    background: linear-gradient(rgba(1, 0, 7, 0.9), rgba(2, 0, 8, 0.9));
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    margin-right: 50px;
+    margin-top: 15px;
+    resize: vertical;
+
+}
+
+  @media(max-width: 768px){
+    .container{
+        width: 98%;
+        margin: auto;
+    }
+
+    nav{
+        display: inline-block;
+    }
+    .table-inbox{
+        overflow-x: hidden;
+        width: 100%;
+        margin-top: 0;
+        z-index: 1;
+    }
+
+    td{
+        padding-right: 50px;
+        padding-left: 2px;
+        height: 36px;
+        vertical-align: middle;
+        border-bottom: 1px solid #ddd;
+    }
+   
+
+    .nav-inbox {
+        display: none;
+
+    }
+
+    .nav-content{
+        position: absolute;
+        top: 57px;
+        color:white;
+        overflow: hidden;
+        background-color: #202226;
+        width: 20%;
+        max-height: 0px;
+   
+    }
+    .nav-content a{
+       color: white;
+       text-decoration: none;
+       padding-right: 30px;
+    }
+    }
