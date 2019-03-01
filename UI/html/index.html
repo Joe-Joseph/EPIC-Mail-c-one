@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>EPIC Mail | Welcome</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Rasa" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div id = "branding">
+                <h1>EPIC Mail</h1>
+            </div>
+
+            <nav>
+                <ul>
+                    <li class="active"><a href="signIn.html"><button id="signInButton">Sign in</button></a></li>
+                    <li><a href="index.html"><button id="signUpButton">Sign up</button></a></li>
+                    <li><a href="admin.html"><button id="adminButton">Admin</button></a></li>
+                </ul>
+            </nav>
+
+            <div id="welcome">
+                <h1>Welcome to EPIC Mail</h1>
+                <p><span>EPIC Mail</span>  helps you exchange information with your freinds and your co-workers through sending and receiving email</p>
+            </div>
+
+            <div id="signUpForm">
+                <h2>Sign up</h2>
+                <form action="inbox.html">
+                    <div class="inputBox">            
+                        <input autocomplete="off" type="text" name="firstName" required>
+                        <label for="firstName">First Name</label>
+                    </div>
+                    
+                    <div class="inputBox">                   
+                        <input autocomplete="off" type="text" name="lastName" required>
+                        <label for="lastName">Last Name</label>
+                    </div>
+                    
+                    <div class="inputBox">
+                        <input autocomplete="off" type="email" name="email"  required>
+                        <label for="email">Email</label>
+                    </div>
+                    
+                    <div class="inputBox">          
+                        <input autocomplete="off" type="password" name="password" required>
+                        <label for="password">Password</label>
+                    </div>
+
+                    <div class="inputBox">          
+                        <input autocomplete="off" type="password" name="password" required>
+                        <label for="password">Confirm-Password</label>
+                    </div>
+                    
+                    
+                    <input type="submit" name="submit" id="submitButton" value="Sign up to EPIC Mail"></a>
+                </form>
+            </div>
+        </div>
+    </header>
+
+<script src="../js/index.js"></script>
+</body>
+</html>
