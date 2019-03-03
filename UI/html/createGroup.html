@@ -12,37 +12,68 @@
     <link href="https://fonts.googleapis.com/css?family=Rasa" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-
-        <div id="userHead">
-                <a id="profileImg" href="#">
-                    <img src="../assets/img/profile1.svg" alt="Profile picture">
+    <header>
+        <div class="containers">
+            <div class="admin-logo-header">
+                <div class="logo">
+                    <img src="../assets/img/icons/mail (1).svg" alt="">
+                </div>
+                <div class="app-name">
+                    <h3>EPIC Mail</h3>
+                </div>
+            </div>
+            <div class="admin-nav">
+                <ul>
+                    <a href="createGroup.html" class="active">
+                        <li><b>Create group</b></li>
+                    </a>
+                    
+                    <a href="addUser.html">
+                        <li><b>Add members</b></li>
+                    </a>
+                    <a href="admin.html">
+                        <li><b>Logout</b></li>
+                    </a>   
+                </ul>
+                <div class="menuBar">
+                    <img src="../assets/img/icons/list.svg" alt="avatar">
+                </div>
+            </div>
+    
+        </div>  
+    </header>
+    <div class="nav-inbox">
+        <ul>
+            <div class="close">X</div>
+                <a href="createGroup.html">
+                    <div class="admin-nav-side">
+                        createGroup 
+                    </div>
                 </a>
-                <div id="userName">
-                    <h5><a href="#">User Name</a></h5>
-                    <span><a href="#">useremail@Gmail.com</a></span>
-                </div>
 
-                <div class="logout">
-                    <a href="createGroup.html">Create Groups</a>
-                    <a href="addUser.html">Add Member</a>
-                    <a href="admin.html">Logout</a>
-                </div>
-        </div>
+                <a href="addUser.html">
+                    <div class="admin-nav-side">
+                        Add member
+                    </div>
+                </a>
 
-        <div id="inbox-head">
-            <h3>create Group</h3>
-        </div>
-       
-        <div class="group">
-            <h2>Create a Group</h2>
-            <form action="addUser.html">
-                <input autocomplete="off" type="text" placeholder="Enter the name of the group">
-                <input type="submit" class="createGroup" value="Add selected member">
-            </form>
-        </div>
- 
+                <a href="admin.html">
+                    <div class="admin-nav-side">
+                        Logout
+                    </div>
+                </a>
+
+            </li>
+        </ul>
     </div>
     
+    <div class="group">
+        <h2>Create a Group</h2>
+        <form action="addUser.html">
+            <input autocomplete="off" type="text" placeholder="Enter the name of the group" required >
+            <input type="submit" class="createGroup" value="Create group">
+        </form>
+    </div>
+    <script src="../js/inbox.js"></script>
 </body>
 </html> 
