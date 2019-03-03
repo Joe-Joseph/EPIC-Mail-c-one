@@ -4,91 +4,112 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>EPIC Mail | Inbox</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" media="screen" href="../css/inbox.css">
     <link href="https://fonts.googleapis.com/css?family=Rasa" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" 
     integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" 
     crossorigin="anonymous">
-    
 </head>
 <body>
 <header>
-    <div class="container">
-        <div id="profile">
-            <a id="profileImg" href="#">
-                <img src="../assets/img/profile1.svg" alt="Profile picture">
+    <div class="containers">
+        <div class="com-email">
+            <a href="#">
+                <button class="btn-com">Compose</button>
             </a>
-            <div id="userName">
-                <h5><a href="#">User Name</a></h5>
-                <span><a href="#">useremail@Gmail.com</a></span>
-            </div>
         </div>
+        <div class="logo-header">
+                <div class="logo">
+                        <img src="../assets/img/icons/mail (1).svg" alt="">
+                      </div>
+                      <div class="app-name">
+                         <h3>EPIC Mail</h3>
+                   </div>
+        </div>
+      <div class="profile-section">
+           <div class="avatar">
+            <img src="../assets/img/icons/ninja.svg" alt="avatar">
+           </div>
+      </div>
+      <div class="menuBar">
+             <img src="../assets/img/icons/list.svg" alt="avatar">
+       </div>
 
-        <nav>
-            <ul>
-                <li>
-                    <a href="#" class="nav-items">
-                        <i class="fas fa-bars"></i>
-                    </a>
-                    <div class="nav-content">
-                        <div class="nav-sub">
-                            <ul>
-                                <li><a class="drop-items" href="compose.html" >  Compose</a></li>
-                                <li><a class="drop-items" href="inbox.html" >  Inbox <span id="newMail">2</span></a></li>
-                                <li><a class="drop-items" href="sent.html" >  Sent Mail</a></li>
-                                <li><a class="drop-items"  href="draft.html" > Drafts <span id="dMail">30</span></a></li>
-                                <li><a class="drop-items"  href="trash.html" > <i id=" deleted"></i> Trash</a></li>
-                                <li><a class="drop-items"  href="signIn.html">Logout</a></li>
-                            </ul>
-
-                        </div>
-
-                    </div>
-
-                </li>
-            </ul>
-                
-        </nav>
     </div>  
 </header>
     <div class="container">     
         <div class="nav-inbox">
             <ul>
+                <div class="close">X</div>
                 <li>
-                    <a href="compose.html"> Compose</a>
+                    <a href="compose.html"> 
+                        <div class="side-icon">
+                                <img src="../assets/img/icons/compose.svg" alt="">
+                            </div>  
+                        <div class="side-title">
+                        Compose
+                        </div>
+                    </a>
                 </li>
 
                 <li class="active">
-                    <a href="inbox.html"> Inbox <span id="newMail">2</span></a>
+
+                    <a href="inbox.html">
+                        <div class="side-icon">
+                            <img src="../assets/img/icons/speech-bubble.svg" alt="">
+                        </div>  
+                        <div class="side-title">
+                            Inbox <span id="newMail">2</span>
+                        </div>
+                    </a>
 
                 </li>
                 <li>
-                    <a href="sent.html"> Sent Mail</a>
+                    <a href="sent.html"> 
+                        <div class="side-icon">
+                            <img src="../assets/img/icons/compose.svg" alt="">
+                        </div>
+                        <div class="side-title">
+                            Sent Mail
+                        </div>  
+                    </a>
                 </li>
                 <li>
-                    <a href="draft.html">Drafts <span id="dMail">30</span></a>
+                    <a href="draft.html">
+                        <div class="side-icon">
+                            <img src="../assets/img/icons/throw-to-paper-bin.svg" alt="">
+                        </div>
+                        <div class="side-title">
+                            Drafts <span id="dMail">30</span>
+                        </div>
+                    </a>
                 </li>
                 <li>
-                    <a href="trash.html"><i id=" deleted"></i> Trash</a>
+                    <a href="trash.html">
+                        <div class="side-icon">
+                                <img src="../assets/img/icons/garbage.svg" alt="">
+                        </div>
+                        <div class="side-title">
+                            Trash
+                        </div>
+                    </a>
+                        
                 </li>
             </ul>
-        </div>
-            
-        <div class="table-inbox">
+        </div>      
+        <div class="table-inbox"> 
             <form action="inbox.html" method="POST">
                 <input autocomplete="off" type="text" id="fname" name="firstname" placeholder="Recipient email..">
                     
                 <input autocomplete="off" type="text" id="lname" name="lastname" placeholder="Subject..">
             
-                <textarea id="subject" name="subject" placeholder="Your message.." style="height:200px"></textarea><br>
-                    
+                <textarea id="subject" name="subject" placeholder="Your message.." class="textArea"></textarea><br>       
                 <input type="submit" value="Send message">
-                <a href="draft.html"><button class="save">Save as draft</button></a>
-                    
+                <a href="draft.html"><button class="save">Save as draft</button></a>       
             </form>
         </div>
     </div>
-<script src="../js/index.js"></script>
+<script type="text/javascript" src="../js/inbox.js"></script>
 </body>
 </html>
