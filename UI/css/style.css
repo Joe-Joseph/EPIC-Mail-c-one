@@ -7,7 +7,7 @@ body{
 }
 
 .container{
-    width: 80%;
+    width: 87%;
     margin: auto;
     overflow: hidden;
     
@@ -21,9 +21,34 @@ ul{
 header{
     background: linear-gradient(rgba(1, 0, 7, 0.9), rgba(2, 0, 8, 0.9)), url('../assets/img/email.jpg') no-repeat;
     background-size: cover;
-    min-height: 696px;
+    min-height: 700px;
     color: white;
-    height: 100%;
+    min-height: 100vh;
+}
+
+.home-nav{
+    background-color: #151414d6;
+    border-bottom: 1px solid #4b5152;
+    width: 100%;
+    min-height: 80px;
+    padding: 0;
+    z-index: 1;
+    overflow-x: hidden;
+}
+
+.nav-inbox {
+    font-size: 12px;
+    width: 15%;
+    padding-top: 20px;
+    display: none;
+}
+
+.nav-inbox li{
+   padding: 15px;
+}
+
+.nav-inbox li a{
+    text-decoration: none;
 }
 
 header a{
@@ -51,17 +76,26 @@ header li{
 header li button{
     display: inline;
     padding: 0 0 0 25px;
-    background: rgb(51, 156, 51);
+    background-color :#0a554fe8;
     border: none;
     font-size: 18px;
     padding: 8px 20px;
-    border-radius: 5px;
+    border-radius: 2px;
     font-family: 'Rasa', serif;
     color:whitesmoke;
+    outline: none;
+}
+
+header li button:hover{
+    background-color: #369b92e8;
+}
+
+.menuBar{
+    display: none;
 }
 
 #welcome h1{
-    margin-top: 270px;
+    margin-top: 200px;
     font-size: 50px;
     margin-bottom: 5px;
 }
@@ -87,7 +121,7 @@ nav{
 #signUpForm{
     float: right;
     width: 32%;
-    margin-top: -340px;
+    margin-top: -360px;
     margin-right: 1px;
 }
 
@@ -108,7 +142,7 @@ nav{
     padding: 10px 20px;
     border-radius: 50px;
     border: none;
-    background-color: rgb(51, 156, 51);
+    background-color: #0a554fe8;
     color: white;
     font-family: 'Rasa', serif;
     font-size: 18px;
@@ -149,28 +183,29 @@ nav{
 }
 
 #signUpForm input[type="submit"]{
-    background: rgb(51, 156, 51);
+    background: #0a554fe8;
     font-size: 18px;
     text-align: center;
     border: none;
     padding: 10px 20px;
-    border-radius: 30px;
+    border-radius: 2px;
     color: #fff;
     width: 100%;
     font-family: 'Rasa', serif;
+    outline: none;
 }
 
 /* Sign in page */
 .signinHeader{
     background: linear-gradient(rgba(1, 0, 7, 0.9), rgba(2, 0, 8, 0.9)), url('../assets/img/joy.jpg') no-repeat;
     background-size: cover;
-    min-height: 696px;
+    min-height: 100hv;
     color: white;
     height: 100%;
 }
 
 #signInForm{
-    margin-top: 20%;
+    margin-top: 16%;
     width: 38%;
     margin-left: 32%;
 }
@@ -222,15 +257,20 @@ nav{
 }
 
 #signInForm input[type="submit"]{
-    background: rgb(51, 156, 51);
+    background: #0a554fe8;
     font-size: 18px;
     text-align: center;
     border: none;
     padding: 10px 20px;
-    border-radius: 30px;
+    border-radius: 2px;
     color: #fff;
     width: 100%;
     font-family: 'Rasa', serif;
+    outline: none;
+}
+
+#signInForm input[type="submit"]:hover{
+    background-color: #369b92e8;
 }
 
 #signInForm a:hover{
@@ -241,11 +281,17 @@ nav{
     margin-bottom: 30px;
 }
 
+
 /*Media queries */
 @media(max-width: 768px){
     .container{
         width: 98%;
         margin: auto;
+    }
+
+    header{
+        min-height: 100hv;
+        height: 100%;
     }
 
     header #branding,
@@ -258,6 +304,63 @@ nav{
 
     header nav li button{
         margin-right: 5px;
+    }
+
+    .close{
+        margin: 10px;
+        font-size: 25px;
+        right: 0;
+        top: 0;
+        cursor: pointer;
+        position: absolute;
+        border: 1px solid #fff;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 10px;
+        padding-bottom: 5px;
+        display: block;
+    }
+
+    .menuBar{
+        display: block;
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin-right: 15px;
+        margin-top: 20px;
+        color: white;
+    }
+
+    .nav-inbox{
+        background:#131111;
+        width: 45%;
+        position: fixed;
+        z-index: 500;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        box-shadow: 0px 0px 8px 2px #0e000057;
+       transform:translateX(100%);
+        -webkit-transform: translateX(100%);
+        -webkit-transition:transform 0.6s ease;
+        transition: transform 0.5s ease;
+        display: block;
+    }
+
+    .nav-inbox ul{
+        margin-top: 60px;
+        margin-left: 20px;
+    }
+    .nav-inbox li a{
+        text-decoration: none;
+    }
+    .admin-nav-side{
+        display: block;
+        margin-top: 20px;
+        color: #fff;
+        font-size: 21px;
     }
 
     #welcome h1{
@@ -285,5 +388,20 @@ nav{
 
     .signinHeader{
         min-height: 505px;
+    }
+
+    header li button{
+        display: none;
+    }
+
+    .home-nav{
+        min-height: 25px;
+    }
+
+    header #branding h1 {
+        margin: 0;
+        margin-top: 14px;
+        margin-left: 8px;
+        float: left;
     }
 }

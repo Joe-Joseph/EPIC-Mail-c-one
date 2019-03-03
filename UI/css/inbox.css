@@ -1,102 +1,73 @@
+@import url('https://fonts.googleapis.com/css?family=Pacifico|Russo+One');
+@import url('https://fonts.googleapis.com/css?family=Comfortaa|Titillium+Web|ZCOOL+QingKe+HuangYou');
+*{
+    margin: 0;
+    padding: 0;
+}
 body{
     margin: 0;
     padding: 0;
-    line-height: 1.5;
     font-size: 15px;
-    font-family: 'Rasa', serif;
+    font-family: "comfortaa",cursive;
+}
+ul{
+    list-style-type: none;
 }
 
 .container{
-    width: 100%;
+    position: relative;
     margin: auto;
    overflow: hidden;
+   padding-left: 20px;
+   margin-top: 80px;
 }
 
 header {
-    background: #10151c;
-    color: #fff;
-    width: 100%;
-    margin-top: 0;
-    z-index: 1;
-}
-
-header #profile{
-    float: left;
-}
-
-header #profileImg {
-    text-decoration: none;
-    display: inline;
-}
-
-header #userName{
-    display: inline-block;
-    margin: 0 0 0 10px;
-}
-
-header #userName h5{
-    font-size: 14px;
-    font-weight: 300;
-    margin-bottom: 0;
-    margin-top: 15px;
-}
-
-header #userName a {
-    color: #fff;
-    text-decoration: none;
-}
-
-header nav{
-    float: right;
-    height: 30px;
-}
-
-.nav-inbox {
-    background:#202226;
-    font-size: 20px;
-    line-height: 80px;
-    display: inline-block;
-    margin-top: 0;
-    padding: 0;
-    width: 215px;
     position: fixed;
-    height: 100%;
-    overflow-y: auto;
+    width: 100%;
+    top: 0;
+    background: #fff;
+    z-index: 200;
+}
+.nav-inbox {
+    background: #fff;
+    font-size: 12px;
+    width: 15%;
+    padding-top: 20px;
 }
 
 .nav-inbox li{
-    display: block;
-    line-height: 60px;
-    width: 100%;
-    z-index: 1;
+   padding: 15px;
 }
 
 .nav-inbox li a{
     text-decoration: none;
-    color: white;
+    color:#333;
 }
 
 .table-inbox{
-  width: 83%;
-  float: right;
-  margin-top: 0;
-  z-index: 1;
-  border: 1px solid #eee;
-  box-shadow: 0 2px 2px #ccc;
-  padding-bottom: 30px;
-  margin-right: 0;
+    width: 85%;
+    position: fixed;
+    overflow: auto;
+    margin-left: 15%;
+    top: 0;
+    margin-top: 70px;
+    height: 80%;
 }
 
 table{
+    font-weight: normal;
     width: 100%;
+    position: relative;
 }
-
-td{
-    padding-right: 50px;
-    padding-left: 50px;
-    height: 36px;
-    vertical-align: middle;
-    border-bottom: 1px solid #ddd;
+.trashEmail{
+    width: 20px;
+}
+.view{
+    cursor: pointer;
+}
+.view:hover{
+    background:#fcfcfc;
 }
 
 .table-inbox .mail-view-date{
@@ -115,19 +86,18 @@ td{
     color: black;
 }
 
-tr:hover {
-    background-color: #f5f5f5;
-}
-
-.table-inbox input[type=text], select, textarea {
-    width: 74%; 
-    padding: 12px; 
-    border: 1px solid #ccc; 
-    border-radius: 4px; 
-    box-sizing: border-box; 
-    margin-top: 6px; 
-    margin-bottom: 16px; 
-    resize: vertical 
+.table-inbox input[type=text],select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 2px;
+    box-sizing: border-box;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+    outline: none;
+    box-shadow: none;
+    font-family: "Comfortaa",cursive;
   }
   
  
@@ -136,9 +106,14 @@ tr:hover {
     color: white;
     padding: 12px 20px;
     border: none;
-    border-radius: 4px;
+    border-radius: 2px;
     margin-right: 50px;
     margin-top: 15px;
+    font-family: "Comfortaa",cursive;
+    outline: none;
+    box-shadow: none;
+    height: 50px;
+    text-transform: capitalize;
   }
   
  
@@ -147,9 +122,9 @@ tr:hover {
   }
 
   .table-inbox form{
-    margin-left: 50px;
+    margin-left: 0px;
     margin-top: 30px;
-
+    width: 90%;
   }
   
  nav .nav-items{
@@ -212,13 +187,13 @@ tr:hover {
  }
 
 .group{
-    border: 3px solid #eee;
-    box-shadow: 0 2px 2px #ccc;
+    border: 1px solid #fff;
+    box-shadow: 2px 2px 2px 2px #ccc;
     border-radius: 4px;
     margin-left: 30%;
     margin-top: 13%;
     width: 40%;
-    padding: 20px 10px;
+    padding: 30px 10px;
     text-align: center;
 }
 
@@ -228,50 +203,213 @@ tr:hover {
     border: 1px solid #ccc; 
     border-radius: 4px; 
     box-sizing: border-box; 
-    margin-top: 6px; 
-    margin-bottom: 16px; 
-    resize: vertical 
+    margin-top: 40px;
+    margin-bottom: 20px;
+    resize: vertical;
+    outline: none;
+    font-family: "Comfortaa",cursive;
   }
 
   .group .createGroup{
     width: 100%;
     padding: 10px 20px;
-    border-radius: 50px;
+    border-radius: 3px;
     border: none;
     color: white;
     font-family: 'Rasa', serif;
-    font-size: 18px;
+    font-size: 16px;
     margin-top: 20px;
     background:  #202226;
     resize: vertical;
+    outline: none;
+    border: none;
+    font-family: "Comfortaa",cursive;
+}
+
+.group .createGroup:hover{
+    background-color: black;
 }
 
 .save{
-    background: linear-gradient(rgba(1, 0, 7, 0.9), rgba(2, 0, 8, 0.9));
-    color: white;
+    background: #ddd;
+    color: #333;
     padding: 12px 20px;
     border: none;
-    border-radius: 4px;
+    border-radius: 2px;
     margin-right: 50px;
     margin-top: 15px;
-    resize: vertical;
+    font-family: "Comfortaa",cursive;
+    outline: none;
+    box-shadow: none;
+    height: 50px;
+    text-transform: capitalize;
 
 }
+/*new css code*/
+.containers{
+    top: 0;
+    height: 60px;
+    padding-left: 40px;
+    padding-bottom: 5px;
+    padding-top: 20px;
+    box-shadow: 2px 0px 2px 2px #eaeaea;
+    z-index: 100;
+}
+.profile-section{
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-right: 40px;
+    padding-top: 20px;
+}
+.avatar{
+    width: 40px;
+    height: 40px;
+}
+.avatar img{
+    width: 100%;
+    height: 100%;
+}
+.logo{
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+.logo img{
+    width: 100%;
+    height: 100%;
+}
+.logo-header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
 
-  @media(max-width: 768px){
+.admin-logo-header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+}
+.app-name h3{
+    font-family: 'Russo One', sans-serif;
+}
+
+.admin-nav{
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-right: 40px;
+    padding-top: 20px;
+}
+
+.admin-nav ul li{
+    display: inline;
+    padding-left: 20px;
+    font-family: 'Titillium Web', sans-serif;
+}
+.admin-nav ul a{
+    text-decoration: none;
+    color: black;
+}
+
+.admin-nav ul a:hover{
+    color: blue;
+}
+
+.admin-nav ul .active{
+    color: blue;
+}
+
+.side-icon{
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+}
+.side-title{
+    display: inline-block;
+    position: absolute;
+    margin-top: 1px;
+    margin-left: 10px;
+}
+.textArea{
+    height: 150px;
+}
+.com-email{
+    display: block;
+    position: absolute;
+}
+.btn-com{
+    padding: 10px;
+    width: 150px;
+    height: 50px;
+    font-family: "Comfortaa",cursive;
+    border: none;
+    background: #1b1920;
+    color: #fff;
+    border-radius: 2px;
+    outline: none;
+    box-shadow: none;
+}
+.close{
+    display: none;
+}
+.menuBar{
+    display: none;
+}
+.table-responsive{
+    margin-top: 30px;
+    box-shadow: 0 5px 15px #ddddddb0;
+    padding-bottom: 20px;
+}
+.table-responsive thead{
+    border-bottom: 1px solid #ddd;
+}
+table th, table td {
+    padding: 20px;
+    font-size: 13px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+.message{
+    top:50px;
+    margin-top: 50px;
+    margin-right: 150px;
+    margin-left: 30px;
+}
+
+.message p{
+    padding-top: 20px;
+    line-height: 1.5;
+    padding-bottom: 20px;
+}
+.view a{
+    display: block;
+    text-decoration: none;
+    color: black;
+}
+
+  @media screen and (max-width: 768px){
     .container{
-        width: 98%;
-        margin: auto;
+        width: 100%;
+        padding-left: 0;
+        margin-top: 0px;
     }
 
     nav{
         display: inline-block;
     }
     .table-inbox{
-        overflow-x: hidden;
+        position: relative;
+        margin-left: 0;
+        padding: 5px;
+        margin-top: 0px;
+        width: 97%;
+    }
+    .table-inbox form{
         width: 100%;
-        margin-top: 0;
-        z-index: 1;
+        margin-top: 15px;
     }
 
     td{
@@ -280,12 +418,6 @@ tr:hover {
         height: 36px;
         vertical-align: middle;
         border-bottom: 1px solid #ddd;
-    }
-   
-
-    .nav-inbox {
-        display: none;
-
     }
 
     .nav-content{
@@ -302,5 +434,89 @@ tr:hover {
        color: white;
        text-decoration: none;
        padding-right: 30px;
+    }
+    /*new*/
+    .containers{
+        height: auto;
+        position: relative;
+        padding-left: 15px;
+        padding-bottom: 13px;
+        box-shadow: 0px 0px 8px 2px #cccccc57;
+    }
+    .btn-com{
+        display: none;
+    }
+    .logo-header{
+        justify-content: center;
+    }
+    .nav-inbox{
+        background:#fff;
+        width: 45%;
+        position: fixed;
+        z-index: 500;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        box-shadow: 0px 0px 8px 2px #cccccc57;
+       transform:translateX(100%);
+        -webkit-transform: translateX(100%);
+        -webkit-transition:transform 0.6s ease;
+        transition: transform 0.5s ease;
+    }
+    .admin-nav ul{
+       display: none;
+    }
+    
+    .close{
+        margin: 10px;
+        font-size: 25px;
+        right: 0;
+        top: 0;
+        cursor: pointer;
+        position: absolute;
+        border: 1px solid #ddd;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 10px;
+        padding-bottom: 5px;
+        display: block;
+    }
+    .profile-section{
+        left: 0;
+        margin-left: 15px;
+    }
+    .menuBar{
+        display: block;
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin-right: 15px;
+        margin-top: 20px;
+    }
+    .nav-inbox ul{
+        margin-top: 60px;
+        margin-left: 20px;
+    }
+    .nav-inbox a{
+        text-decoration: none;
+    }
+    .admin-nav-side{
+        display: block;
+        margin-top: 20px;
+        color: black;
+        font-size: 16px;
+    }
+  table td {
+        text-align: justify;
+    }
+
+    .group{
+        position: relative;
+        width: 85%;
+        margin-left: 4%;
+        margin-top: 35%;  
+        
     }
     }
