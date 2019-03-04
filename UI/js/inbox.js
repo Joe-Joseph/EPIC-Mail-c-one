@@ -1,10 +1,11 @@
-function openSideMenu(){
-  document.getElementById('side-nav').style.width = "250px";
-  document.getElementById('mailBox').style.marginRight = "250px";
-  document.getElementById('mailBox').style.marginLeft = "400px";
-}
-
-function closeSideMenu(){
-  document.getElementById('side-nav').style.width = "250px";
-  document.getElementById('mailBox').style.marginLeft = "250px";
-}
+/*open*/
+const menuBar=document.querySelector(".menuBar");
+const openMenu=document.querySelector(".nav-inbox");
+const closeMenu=document.querySelector(".close");
+menuBar.addEventListener("click",()=>{
+  openMenu.style="transform:translateX(0%)";
+})
+/*close*/
+closeMenu.addEventListener("click",()=>{
+  openMenu.style="transform:translateX(100%)";
+})

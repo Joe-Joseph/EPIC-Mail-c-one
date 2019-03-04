@@ -11,18 +11,54 @@
 </head>
 <body>
     <header class="signinHeader">
+        <div class="home-nav">
+            <div class="container">
+                <a href="index.html">
+                    <div id = "branding">
+                        <h1>EPIC Mail</h1>
+                    </div>
+                </a>
+        
+                <nav>
+                    <ul>
+                        <li class="active"><a href="signIn.html"><button id="signInButton">Sign in</button></a></li>
+                        <li><a href="index.html"><button id="signUpButton">Sign up</button></a></li>
+                        <li><a href="admin.html"><button id="adminButton">Admin</button></a></li>
+                    </ul>
+
+                    <div class="menuBar">
+                        <img src="../assets/img/icons/menu.svg" alt="avatar">
+                    </div>
+                </nav>
+            </div>              
+        </div>
+
+        <div class="nav-inbox">
+            <ul>
+                <div class="close">X</div>
+                    <a href="admin.html">
+                        <div class="admin-nav-side">
+                            Admin 
+                        </div>
+                    </a>
+    
+                    <a href="signIn.html">
+                        <div class="admin-nav-side">
+                            Sign in
+                        </div>
+                    </a>
+    
+                    <a href="index.html">
+                        <div class="admin-nav-side">
+                            Sign up
+                        </div>
+                    </a>
+    
+                </li>
+            </ul>
+        </div>
+
         <div class="container">
-            <div id = "branding">
-                <h1>EPIC Mail</h1>
-            </div>
-
-            <nav>
-                <ul>
-                    <li><a href="signIn.html"><button id="signInButton">Sign in</button></a></li>
-                    <li><a href="index.html"><button id="signUpButton">Sign up</button></a></li>
-                </ul>
-            </nav>
-
             <div id="signInForm">
                 <h2>Sign in</h2>
                 <form action="inbox.html" method="POST">
@@ -44,5 +80,6 @@
             </div>
         </div>
     </header>
+<script src="../js/inbox.js"></script>
 </body>
 </html>
