@@ -1,5 +1,5 @@
 # EPIC-Mail-c-one
-EPIC-Mail
+*************************
 
 EPIC Mail is Web application that will help people to interact and exchange messages/information over the internet.
 
@@ -12,5 +12,15 @@ EPIC Mail features
 5. Users can view their inbox and read messages.
 6. Users can read sent messages.
 7. Users can save an email as draft and send it later or delete it.
+
+Technology used
+***********************
+JavaScript
+HTML
+CSS
+
+Author
+***********
+Nkurunziza Joseph
 
 
