@@ -2,7 +2,7 @@ import messages from '../models/messages';
 import moment from 'moment';
 //const uuid = require('uuid');
 
-exports.createEmail = async (req, res) =>{
+exports.createEmail = (req, res) =>{
     //res.send('Send email');
 
 const message= {
@@ -14,6 +14,6 @@ const message= {
     createdOn: moment().format('LL')
 };
 //console.log(message.createdOn);
-await messages.push(message);
+messages.push(message);
 res.send( {status: 200, data: message});
 }
