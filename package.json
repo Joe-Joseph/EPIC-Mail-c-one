@@ -7,7 +7,7 @@
     "test": "tests"
   },
   "scripts": {
-    "test": "mocha --require @babel/register",
+    "test": "mocha --require @babel/register server/test/**/*.test.js",
     "start": "nodemon --exec babel-node server/Server/app.js"
   },
   "author": "",
