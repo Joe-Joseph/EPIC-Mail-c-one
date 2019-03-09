@@ -7,7 +7,7 @@
     "test": "tests"
   },
   "scripts": {
-    "test": "nyc --reporter=text --reporter=lcov mocha --require @babel/register server/test/**/*.test.js",
+    "test": "nyc --reporter=text --reporter=lcov mocha --require @babel/register server/test/**/*.test.js --exit",
     "start": "nodemon --exec babel-node server/Server/app.js",
     "coveralls": "nyc report --reporter=text-lcov | coveralls"
   },
