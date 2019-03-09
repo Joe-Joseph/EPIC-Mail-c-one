@@ -16,7 +16,7 @@ app.use(express.json());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.use('/',(req,res)=>
+app.get('/',(req,res)=>
     res.send({message:"Welcome to EPIC Mail API"})
 );
 app.use('/api/v1/auth/signup', signup );
