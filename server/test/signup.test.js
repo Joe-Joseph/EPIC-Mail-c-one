@@ -14,45 +14,98 @@ describe('Signup', () => {
       .send({ firstName: 'ab' })
       .end((err, res) => {
         expect(res.body.status).to.be.equal(400)
+        expect(res.body.error).to.be.a('string')
       })
   })
 
-  // it('First name should not be empty', () =>{
-  //     chai.request(app)
-  //     .post('/api/v1/auth/signup')
-  //     .send({firstName: "", lastName: ""})
-  //     .end((err, res) =>{
-  //         // expect(res.body).to.be.an('object');
-  //         // // expect(res.body).to.be.json;
-  //         // expect(res.body).to.have.status(400);
-  //         console.log(res.body);
-  //     });
-  // })
+  it('All fields are required', () =>{
+      chai.request(app)
+      .post('/api/v1/auth/signup')
+      .send({ firstName: "", 
+        lastName: "", 
+        email: "", 
+        password: "", 
+        confirmPassword: "" 
+    })
+      .end((err, res) =>{
+          expect(res.body.status).to.be.equal(400)
+          expect(res.body.error).to.be.a('string')
+      });
+  })
 
-  // it(' Password and confirm-password length must be at least 6 characters long', () =>{
-  //     chai.request(app)
-  //     .post('/api/v1/auth/signup')
-  //     .send({firstName: "abde", lastName: "abde", password: "abc", confirmPassword: "ab", email: "jos@test.com"})
-  //     .end((err, res) =>{
-  //         console.log(res.body);
-  //     })
-  // })
+  it('Password and confirm-password length must be at least 6 characters long', () =>{
+      chai.request(app)
+      .post('/api/v1/auth/signup')
+      .send({
+        firstName: "abde",
+        lastName: "abdhe",
+        email: "jos@test.com",
+        password: "abcde",
+        confirmPassword: "abcde"
+        })
+      .end((err, res) =>{
+        expect(res.body.status).to.be.equal(400)
+        expect(res.body.error).to.be.a('string')
+          
+      })
+  })
 
-  // it(' Email should not be empty', () =>{
-  //     chai.request(app)
-  //     .post('/api/v1/auth/signup')
-  //     .send({firstName: "abde", lastName: "abde", email: ""})
-  //     .end((err, res) =>{
-  //         console.log(res.body);
-  //     })
-  // })
+  it('Password and confirm-password must match', () =>{
+    chai.request(app)
+    .post('/api/v1/auth/signup')
+    .send({
+      firstName: "abde",
+      lastName: "abdhe",
+      email: "jos@test.com",
+      password: "abcdefg",
+      confirmPassword: "abcdefgh"
+      })
+    .end((err, res) =>{
+      expect(res.body.status).to.be.equal(400)
+      expect(res.body.error).to.be.a('string')
+        
+    })
+})
 
-  // it(' Email should be valid email', () =>{
-  //     chai.request(app)
-  //     .post('/api/v1/auth/signup')
-  //     .send({firstName: "abde", lastName: "abde", email: "jos@gmail.com"})
-  //     .end((err, res) =>{
-  //         console.log(res.body);
-  //     })
-  // })
+  it('Email should be valid email', () =>{
+      chai.request(app)
+      .post('/api/v1/auth/signup')
+      .send({firstName: "abde", lastName: "abde", email: "josgmail.com"})
+      .end((err, res) =>{
+        expect(res.body.status).to.be.equal(400)
+        expect(res.body.error).to.be.a('string')
+      })
+  })
+
+  it('Email already exist', () =>{
+    chai.request(app)
+    .post('/api/v1/auth/signup')
+    .send({
+      firstName: "abde",
+      lastName: "abde",
+      email: "john@gmail.com"
+    })
+    .end((err, res) =>{
+      expect(res.body.status).to.be.equal(400)
+      expect(res.body.error).to.be.a('string')
+    })
+})
+
+  it('Create account for user', () =>{
+    chai.request(app)
+    .post('/api/v1/auth/signup')
+    .send({
+      firstName: "abde",
+      lastName: "abdhe",
+      email: "jos@test.com",
+      password: "abcdefg",
+      confirmPassword: "abcdefg"
+      })
+    .end((err, res) =>{
+      expect(res.body.status).to.be.equal(200)
+      expect(res).to.be.json
+      expect(res.body.data).to.be.an('object')
+        
+    })
+})
 })
