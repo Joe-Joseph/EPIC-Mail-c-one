@@ -1,7 +1,7 @@
-import express from 'express';
-const router = express.Router();
-import receivedEmailCtrl from '../controllers/receivedEmail';
+import express from 'express'
+import receivedEmailCtrl from '../controllers/receivedEmail'
+const router = express.Router()
 
-router.get('/', receivedEmailCtrl.viewEmails );
+router.get('/', receivedEmailCtrl.viewEmails)
 
-export default router;
+export default router
