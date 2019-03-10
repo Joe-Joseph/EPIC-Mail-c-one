@@ -1,19 +1,22 @@
-import messages from '../models/messages';
-import moment from 'moment';
-//const uuid = require('uuid');
+import messages from '../models/messages'
+import moment from 'moment'
+// const uuid = require('uuid');
 
-exports.createEmail = (req, res) =>{
-    //res.send('Send email');
+const createEmail = (req, res) => {
+// res.send('Send email');
 
-const message= {
+  const message = {
     id: messages.length + 1,
     subject: req.body.subject,
     message: req.body.message,
     parentId: req.body.parentId,
-    status: "sent",
+    status: 'sent',
     createdOn: moment().format('LL')
-};
-//console.log(message.createdOn);
-messages.push(message);
-res.send( {status: 200, data: message});
+  }
+
+  // console.log(message.createdOn);
+  messages.push(message)
+  res.send({ status: 200, data: message })
 }
+
+export default createEmail

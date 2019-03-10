@@ -1,7 +1,8 @@
-import express from 'express';
-const router = express.Router();
-import sendEmailCtrl from '../controllers/sendEmail';
+import express from 'express'
+import sendEmailCtrl from '../controllers/sendEmail'
 
-router.post('/', sendEmailCtrl.createEmail );
+const router = express.Router()
 
-export default router;
+router.post('/', sendEmailCtrl)
+
+export default router

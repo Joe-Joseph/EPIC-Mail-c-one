@@ -1,7 +1,8 @@
-import express from 'express';
-const router = express.Router();
-import unreadCtrl from '../controllers/unreadEmails';
+import express from 'express'
+import unreadCtrl from '../controllers/unreadEmails'
 
-router.get('/', unreadCtrl.getUnread );
+const router = express.Router()
 
-export default router;
+router.get('/', unreadCtrl)
+
+export default router

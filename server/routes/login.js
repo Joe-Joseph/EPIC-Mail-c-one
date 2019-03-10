@@ -1,7 +1,8 @@
-import express from 'express';
-const router = express.Router();
-import loginCtrl from '../controllers/login';
+import express from 'express'
+import loginCtrl from '../controllers/login'
 
-router.post('/', loginCtrl.login );
+const router = express.Router()
 
-export default router;
+router.post('/', loginCtrl)
+
+export default router

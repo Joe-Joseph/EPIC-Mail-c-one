@@ -1,6 +1,8 @@
-import express from 'express';
-const router = express.Router();
-import draftCtrl from '../controllers/draft';
-router.get('/', draftCtrl.getDraft );
+import express from 'express'
+import draftCtrl from '../controllers/draft'
 
-export default router;
+const router = express.Router()
+
+router.get('/', draftCtrl)
+
+export default router
