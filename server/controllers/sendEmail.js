@@ -2,7 +2,7 @@ import messages from '../models/messages'
 import moment from 'moment'
 // const uuid = require('uuid');
 
-exports.createEmail = (req, res) => {
+const createEmail = (req, res) => {
 // res.send('Send email');
 
   const message = {
@@ -18,3 +18,5 @@ exports.createEmail = (req, res) => {
   messages.push(message)
   res.send({ status: 200, data: message })
 }
+
+export default createEmail

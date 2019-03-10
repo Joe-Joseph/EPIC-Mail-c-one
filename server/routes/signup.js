@@ -3,6 +3,6 @@ import signupCtrl from '../controllers/signup'
 
 const router = express.Router()
 
-router.post('/', signupCtrl.createAccount)
+router.post('/', signupCtrl)
 
 export default router

@@ -1,8 +1,9 @@
-import validateUser from '../helpers/validation'
 import _ from 'lodash'
+import validateUser from '../helpers/validation'
+
 import users from '../models/users'
 
-exports.createAccount = (req, res) => {
+const createAccount = (req, res) => {
   const { error } = validateUser(req.body)
 
   if (error) {
@@ -29,3 +30,5 @@ exports.createAccount = (req, res) => {
   users.push(user)
   res.send({ status: 200, data: _.pick(user, ['id', 'firstName', 'lastName', 'email']) })
 }
+
+export default createAccount

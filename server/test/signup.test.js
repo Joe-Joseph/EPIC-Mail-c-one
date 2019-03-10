@@ -1,8 +1,8 @@
-import chai from 'chai'
+import chai from 'chai';
 import chaiHttp from 'chai-http'
 import app from '../Server/app'
 
-const expect = chai.expect
+const { expect } = chai;
 chai.use(chaiHttp)
 
 // eslint-disable-next-line no-undef
@@ -12,9 +12,8 @@ describe('Signup', () => {
     chai.request(app)
       .post('/api/v1/auth/signup')
       .send({ firstName: 'ab' })
-      .end((res) => {
+      .end((err, res) => {
         expect(res.body.status).to.be.equal(400)
-        console.log(res.body)
       })
   })
 

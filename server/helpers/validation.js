@@ -10,4 +10,5 @@ function validateUser (user) {
   }
   return Joi.validate(user, userSchema)
 }
+
 export default validateUser

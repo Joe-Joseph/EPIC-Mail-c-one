@@ -3,6 +3,6 @@ import sendEmailCtrl from '../controllers/sendEmail'
 
 const router = express.Router()
 
-router.post('/', sendEmailCtrl.createEmail)
+router.post('/', sendEmailCtrl)
 
 export default router

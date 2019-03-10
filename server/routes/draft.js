@@ -3,6 +3,6 @@ import draftCtrl from '../controllers/draft'
 
 const router = express.Router()
 
-router.get('/', draftCtrl.getDraft)
+router.get('/', draftCtrl)
 
 export default router

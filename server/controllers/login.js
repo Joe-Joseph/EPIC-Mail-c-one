@@ -1,7 +1,7 @@
 import users from '../models/users'
 import Joi from 'joi'
 
-exports.login = (req, res) => {
+const login = (req, res) => {
   const { error } = validate(req.body)
 
   if (error) {
@@ -23,3 +23,5 @@ const validate = (req) => {
 
   return Joi.validate(req, userSchema)
 }
+
+export default login
