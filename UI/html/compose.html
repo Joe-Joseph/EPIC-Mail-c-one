@@ -13,51 +13,49 @@
 </head>
 <body>
 <header>
+    <!--    Container for the header    -->
     <div class="containers">
+        <!--    Compose a new email button  --> 
         <div class="com-email">
             <a href="#">
                 <button class="btn-com">Compose</button>
             </a>
         </div>
+        <!--Logo and the title-->
         <div class="logo-header">
-                <div class="logo">
-                        <img src="../assets/img/icons/mail (1).svg" alt="">
-                      </div>
-                      <div class="app-name">
-                         <h3>EPIC Mail</h3>
-                   </div>
+            <div class="logo">
+                <img src="../assets/img/icons/mail (1).svg" alt="">
+            </div>
+            <div class="app-name">
+                <h3>EPIC Mail</h3>
+            </div>
         </div>
-      <div class="profile-section">
+        <!--Profile picture-->
+        <div class="profile-section">
            <div class="avatar">
-            <img src="../assets/img/icons/ninja.svg" alt="avatar">
+                <img src="../assets/img/icons/ninja.svg" alt="avatar">
            </div>
-      </div>
-      <div class="menuBar">
-             <img src="../assets/img/icons/list.svg" alt="avatar">
-       </div>
+        </div>
+        <!--Mubar icon will be displayed in a small screens-->
+        <div class="menuBar">
+            <img src="../assets/img/icons/list.svg" alt="avatar">
+        </div>
 
     </div>  
 </header>
-    <div class="container">     
+    <!--    Container fo the body   -->
+    <div class="container">
+        <!--    Side navbar or navbox   -->    
         <div class="nav-inbox">
             <ul>
+                <!--    Close side navabar when the screen is small -->
                 <div class="close">X</div>
-                <li>
-                    <a href="compose.html"> 
-                        <div class="side-icon">
-                                <img src="../assets/img/icons/compose.svg" alt="">
-                            </div>  
-                        <div class="side-title">
-                        Compose
-                        </div>
-                    </a>
-                </li>
-
+                <!--    List of links to different links    -->
                 <li class="active">
 
                     <a href="inbox.html">
                         <div class="side-icon">
-                            <img src="../assets/img/icons/speech-bubble.svg" alt="">
+                            <img src="../assets/img/icons/speech-bubble.svg" alt="" class="invert">
                         </div>  
                         <div class="side-title">
                             Inbox <span id="newMail">2</span>
@@ -68,7 +66,7 @@
                 <li>
                     <a href="sent.html"> 
                         <div class="side-icon">
-                            <img src="../assets/img/icons/compose.svg" alt="">
+                            <img src="../assets/img/icons/compose.svg" alt="" class="invert">
                         </div>
                         <div class="side-title">
                             Sent Mail
@@ -78,7 +76,7 @@
                 <li>
                     <a href="draft.html">
                         <div class="side-icon">
-                            <img src="../assets/img/icons/throw-to-paper-bin.svg" alt="">
+                            <img src="../assets/img/icons/throw-to-paper-bin.svg" alt="" class="invert">
                         </div>
                         <div class="side-title">
                             Drafts <span id="dMail">30</span>
@@ -88,7 +86,7 @@
                 <li>
                     <a href="trash.html">
                         <div class="side-icon">
-                                <img src="../assets/img/icons/garbage.svg" alt="">
+                                <img src="../assets/img/icons/garbage.svg" alt="" class="invert">
                         </div>
                         <div class="side-title">
                             Trash
@@ -96,9 +94,20 @@
                     </a>
                         
                 </li>
+                <li>
+                    <a href="signIn.html">
+                        <div class="side-icon">
+                            <img src="../assets/img/icons/logout.svg" alt="" class="invert">
+                        </div>
+                        <div class="side-title">
+                            Logout
+                        </div>
+                    </a>    
+                </li>
             </ul>
         </div>      
-        <div class="table-inbox"> 
+        <div class="table-inbox">
+            <!--    Form for writing new email  --> 
             <form action="inbox.html" method="POST">
                 <input autocomplete="off" type="text" id="fname" name="firstname" placeholder="Recipient email..">
                     

@@ -15,36 +15,47 @@ ul{
 }
 
 .container{
-    position: relative;
+    position: absolute;
     margin: auto;
-   overflow: hidden;
-   padding-left: 20px;
-   margin-top: 80px;
-}
+    overflow: hidden;
+    padding-left: 0;
+    margin-top: 80px;
 
+}
+/* Header holding nav-bar*/
 header {
     position: fixed;
     width: 100%;
     top: 0;
-    background: #fff;
+    background: #006f6a;
     z-index: 200;
 }
+/*  The container for side nav box*/
 .nav-inbox {
-    background: #fff;
+    position: fixed;
+    background: #3f0e40;
     font-size: 12px;
     width: 15%;
-    padding-top: 20px;
+    padding-top: 100px;
+    bottom: 0;
+    top:20px;
 }
-
+/*  The space between the list items */
 .nav-inbox li{
    padding: 15px;
 }
-
+/* side navbox links */
 .nav-inbox li a{
     text-decoration: none;
-    color:#333;
+    color:#fff;
 }
 
+/*  Change the color of the icons from back to white */
+.invert{
+    -webkit-filter: invert(100%);
+}
+
+/*  Container for the table in the middle*/
 .table-inbox{
     width: 85%;
     position: fixed;
@@ -54,38 +65,26 @@ header {
     margin-top: 70px;
     height: 80%;
 }
-
+/*  Table containing the emails */
 table{
     font-weight: normal;
     width: 100%;
     position: relative;
 }
+
+/* Class fo the icons*/
 .trashEmail{
     width: 20px;
 }
+
+/* Class for rows*/
 .view{
     cursor: pointer;
 }
 .view:hover{
-    background:#fcfcfc;
+    background:#f1eef1;
 }
-
-.table-inbox .mail-view-date{
-    text-align: right;
-}
-
-.table-inbox .mail-view a{
-    display: block;
-    text-decoration: none;
-    color: black;
-}
-
-.table-inbox .mail-view-date a{
-    display: block;
-    text-decoration: none;
-    color: black;
-}
-
+/*  Input text, select and text area    */
 .table-inbox input[type=text],select, textarea {
     width: 100%;
     padding: 12px;
@@ -100,7 +99,7 @@ table{
     font-family: "Comfortaa",cursive;
   }
   
- 
+ /*  Buttons   */
   .table-inbox input[type=submit] {
     background: linear-gradient(rgba(1, 0, 7, 0.9), rgba(2, 0, 8, 0.9));
     color: white;
@@ -113,79 +112,18 @@ table{
     outline: none;
     box-shadow: none;
     height: 50px;
-    text-transform: capitalize;
   }
-  
  
   .table-inbox input[type=submit]:hover {
     background-color: black;
   }
-
+/*  Form to write a new email   */
   .table-inbox form{
-    margin-left: 0px;
+    margin-left: 20px;
     margin-top: 30px;
     width: 90%;
   }
-  
- nav .nav-items{
-     float: right;
-     margin-left: 40px;
-     height: 40px;
- }
-
- nav ul{
-     margin: 0;
-     padding: 0;
-     float: right;
-     list-style: none;
- }
- .nav-items{
-    color: white;
-    text-decoration: none;
-    padding: 22px 20px;
- }
-
- .nav-items:hover{
-     background-color: #444;
- }
-
- .nav-content{
-     position: absolute;
-     top: 57px;
-     color:white;
-     overflow: hidden;
-     background-color: #202226;
-     width: 8%;
-     max-height: 0px;
-
- }
- .nav-content a{
-    color: white;
-    text-decoration: none;
-    padding-right: 30px;
- }
-
- .nav-content a:hover{
-    color:gray;
- }
-
- .nav-sub{
-     padding-top: 10px;
- }
-
- .nav-sub ul li a{
-    display: inline;
-    line-height: 20px;
-    padding-top: 5px;
- }
-
- .nav-items:focus{
-    background-color: #444;
- }
- .nav-items:focus ~ .nav-content{
-     max-height: 400px;
- }
-
+/* Form to create a new group   */
 .group{
     border: 1px solid #fff;
     box-shadow: 2px 2px 2px 2px #ccc;
@@ -245,7 +183,7 @@ table{
     text-transform: capitalize;
 
 }
-/*new css code*/
+/* Styling the contaniner of the heading    */
 .containers{
     top: 0;
     height: 60px;
@@ -255,6 +193,7 @@ table{
     box-shadow: 2px 0px 2px 2px #eaeaea;
     z-index: 100;
 }
+/*  Icon of the profile picture */
 .profile-section{
     position: absolute;
     top: 0;
@@ -270,6 +209,7 @@ table{
     width: 100%;
     height: 100%;
 }
+/*  Styling the logo    */
 .logo{
     width: 40px;
     height: 40px;
@@ -285,17 +225,19 @@ table{
     align-items: center;
     justify-content: center;
 }
-
+/*  Logo inside the admin page  */
 .admin-logo-header{
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: left;
 }
+/*  Title of the app*/
 .app-name h3{
     font-family: 'Russo One', sans-serif;
 }
 
+/*  Navbar of the admin page*/
 .admin-nav{
     position: absolute;
     top: 0;
@@ -315,18 +257,19 @@ table{
 }
 
 .admin-nav ul a:hover{
-    color: blue;
+    color: white;
 }
 
 .admin-nav ul .active{
-    color: blue;
+    color: white;
 }
-
+/*  Icons for lint to different pages   */
 .side-icon{
     width: 15px;
     height: 15px;
     display: inline-block;
 }
+/*  Links name  */
 .side-title{
     display: inline-block;
     position: absolute;
@@ -336,10 +279,12 @@ table{
 .textArea{
     height: 150px;
 }
+/*  Compose button  */
 .com-email{
     display: block;
     position: absolute;
 }
+/*  Compose button  */
 .btn-com{
     padding: 10px;
     width: 150px;
@@ -358,6 +303,8 @@ table{
 .menuBar{
     display: none;
 }
+
+/* Styling the table    */
 .table-responsive{
     margin-top: 30px;
     box-shadow: 0 5px 15px #ddddddb0;
@@ -379,6 +326,7 @@ table th, table td {
     margin-left: 30px;
 }
 
+/*  Paragraph to read email through */
 .message p{
     padding-top: 20px;
     line-height: 1.5;
@@ -390,6 +338,19 @@ table th, table td {
     color: black;
 }
 
+.nav-inbox a{
+    text-decoration: none;
+    color: white;
+    padding-top: 30px;
+   
+}
+.nav-inbox .admin-nav-side{
+    padding-left: 10px;
+    margin-left: 20px;
+    padding-top: 30px;
+}
+
+/*  making it responsive    */
   @media screen and (max-width: 768px){
     .container{
         width: 100%;
@@ -435,7 +396,7 @@ table th, table td {
        text-decoration: none;
        padding-right: 30px;
     }
-    /*new*/
+  
     .containers{
         height: auto;
         position: relative;
@@ -443,14 +404,17 @@ table th, table td {
         padding-bottom: 13px;
         box-shadow: 0px 0px 8px 2px #cccccc57;
     }
+    /*  Remove compose button   */
     .btn-com{
         display: none;
     }
+    /*  Putting the logo in the center on small screen*/
     .logo-header{
         justify-content: center;
     }
+    /*Sidebar nav for small screen  */
     .nav-inbox{
-        background:#fff;
+        background:#3f0e40;
         width: 45%;
         position: fixed;
         z-index: 500;
@@ -485,6 +449,7 @@ table th, table td {
         left: 0;
         margin-left: 15px;
     }
+    /*  Display menu bar in the smal screen   */
     .menuBar{
         display: block;
         width: 30px;
@@ -505,7 +470,7 @@ table th, table td {
     .admin-nav-side{
         display: block;
         margin-top: 20px;
-        color: black;
+        color: white;
         font-size: 16px;
     }
   table td {
