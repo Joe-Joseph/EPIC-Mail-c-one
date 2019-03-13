@@ -13,7 +13,7 @@
   6. Users can read sent messages.
   7. Users can save an email as draft and send it later or delete it.
 
-**Requirements**
+**Prerequisites**
   * Node
   * Postman
   
@@ -35,6 +35,20 @@
  To run the application test run the following command in terminal
  
  ```npm test```
+ 
+ **Endpoints**
+ 
+ Endpoint | Functionality
+ -------- | -------------
+ POST /api/v1/auth/signup | Create user account
+ POST /api/v1/auth/login | User login
+ GET /api/v1/messages | Get received emails
+ GET /api/v1/messages/unread | Get unread emails
+ GET /api/v1/messages/sent | Get sent emails
+ GET /api/v1/messages/draft | Get draft emails
+ GET /api/v1/messages/:id | Read single email
+ POST /api/v1/messages | Send email to individual
+ DELETE /api/v1/messages/:id | Delete single email
 
 **Technology used**
 
