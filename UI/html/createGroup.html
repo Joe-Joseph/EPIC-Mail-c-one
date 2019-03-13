@@ -13,7 +13,9 @@
 </head>
 <body>
     <header>
+        <!--    Container for the header    -->
         <div class="containers">
+            <!--Logo and the title-->
             <div class="admin-logo-header">
                 <div class="logo">
                     <img src="../assets/img/icons/mail (1).svg" alt="">
@@ -22,6 +24,7 @@
                     <h3>EPIC Mail</h3>
                 </div>
             </div>
+            <!--  Navbar  -->
             <div class="admin-nav">
                 <ul>
                     <a href="createGroup.html" class="active">
@@ -35,6 +38,7 @@
                         <li><b>Logout</b></li>
                     </a>   
                 </ul>
+                <!--Menubar icon will be displayed in a small screens-->
                 <div class="menuBar">
                     <img src="../assets/img/icons/list.svg" alt="avatar">
                 </div>
@@ -42,31 +46,34 @@
     
         </div>  
     </header>
+    <!--    Side navbar or navbox   -->
     <div class="nav-inbox">
         <ul>
+            <!--    Close side navabar when the screen is small -->
             <div class="close">X</div>
+            <!--   List of the groups    -->
                 <a href="createGroup.html">
                     <div class="admin-nav-side">
-                        createGroup 
+                        Group 1 
                     </div>
                 </a>
 
                 <a href="addUser.html">
                     <div class="admin-nav-side">
-                        Add member
+                        Group 2
                     </div>
                 </a>
 
                 <a href="admin.html">
                     <div class="admin-nav-side">
-                        Logout
+                        Group 3
                     </div>
                 </a>
 
             </li>
         </ul>
     </div>
-    
+    <!--    Form for creating the group -->
     <div class="group">
         <h2>Create a Group</h2>
         <form action="addUser.html">
