@@ -20,22 +20,22 @@
   
 **Setup**
   1. Clone the repository
-     https://github.com/Joe-Joseph/EPIC-Mail-c-one.git
+     ```https://github.com/Joe-Joseph/EPIC-Mail-c-one.git```
      
   2. Install dependencies
   
-     npm install
+     ```npm install```
      
   3. Start the server
   
-     npm run start
+     ```npm run start```
   
-  4. Use Postman to test api on localhost:4000
+  4. Use Postman to test api on ```localhost:4000```
   
  **Run test**
  To run the application test run the following command in terminal
  
- npm test
+ ```npm test```
 
 **Technology used**
 
