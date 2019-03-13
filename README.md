@@ -1,5 +1,7 @@
 # EPIC-Mail-c-one
 
+[![Build Status](https://travis-ci.com/Joe-Joseph/EPIC-Mail-c-one.svg?branch=server)](https://travis-ci.com/Joe-Joseph/EPIC-Mail-c-one)  [![Coverage Status](https://coveralls.io/repos/github/Joe-Joseph/EPIC-Mail-c-one/badge.svg?branch=server)](https://coveralls.io/github/Joe-Joseph/EPIC-Mail-c-one?branch=server)   
+[![Maintainability](https://api.codeclimate.com/v1/badges/e633ffcb5e6884fcb52e/maintainability)](https://codeclimate.com/github/Joe-Joseph/EPIC-Mail-c-one/maintainability) 
 [![Build Status](https://travis-ci.com/Joe-Joseph/EPIC-Mail-c-one.svg?branch=server)](https://travis-ci.com/Joe-Joseph/EPIC-Mail-c-one)  [![Coverage Status](https://coveralls.io/repos/github/Joe-Joseph/EPIC-Mail-c-one/badge.svg?branch=server)](https://coveralls.io/github/Joe-Joseph/EPIC-Mail-c-one?branch=server)
  
 **EPIC Mail** is Web application that will help people to interact and exchange messages/information over the internet.
@@ -65,3 +67,4 @@
 
 **Author**
 Nkurunziza Joseph
+
