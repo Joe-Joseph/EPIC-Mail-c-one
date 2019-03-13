@@ -15,92 +15,100 @@
 </head>
 <body>
     <header>
+        <!--    Container for the header    -->
         <div class="containers">
-                <div class="com-email">
-                    <a href="compose.html">
-                        <button class="btn-com">Compose</button>
-                    </a>
+            <!--    Compose a new email button  -->
+            <div class="com-email">
+                <a href="compose.html">
+                    <button class="btn-com">Compose</button>
+                </a>
+            </div>
+            <!--Logo and the title-->
+            <div class="logo-header">
+                <div class="logo">
+                    <img src="../assets/img/icons/mail (1).svg" alt="">
                 </div>
-                <div class="logo-header">
-                    <div class="logo">
-                        <img src="../assets/img/icons/mail (1).svg" alt="">
-                    </div>
-                    <div class="app-name">
-                        <h3>EPIC Mail</h3>
-                    </div>
+                <div class="app-name">
+                    <h3>EPIC Mail</h3>
                 </div>
-                <div class="profile-section">
-                    <div class="avatar">
-                        <img src="../assets/img/icons/ninja.svg" alt="avatar">
-                    </div>
+            </div>
+            <!--Profile picture-->
+            <div class="profile-section">
+                <div class="avatar">
+                    <img src="../assets/img/icons/ninja.svg" alt="avatar">
                 </div>
-                <div class="menuBar">
-                    <img src="../assets/img/icons/list.svg" alt="avatar">
-                </div>
+            </div>
+            <!--Menubar icon will be displayed in a small screens-->
+            <div class="menuBar">
+                <img src="../assets/img/icons/list.svg" alt="avatar">
+            </div>
         
         </div> 
     </header>
+    <!--    Container fo the body   -->
     <div class="container">
-            <div class="nav-inbox">
-                <ul>
-                    <div class="close">X</div>
-    
-                    <li class="active">
-    
-                        <a href="inbox.html">
-                            <div class="side-icon">
-                                <img src="../assets/img/icons/speech-bubble.svg" alt="">
-                            </div>  
-                            <div class="side-title">
-                                Inbox <span id="newMail">2</span>
-                            </div>
-                        </a>
-    
-                    </li>
-                    <li>
-                        <a href="sent.html"> 
-                            <div class="side-icon">
-                                <img src="../assets/img/icons/compose.svg" alt="">
-                            </div>
-                            <div class="side-title">
-                                    Sent Mail
-                            </div>  
-                        </a>
-                    </li>
-                    <li>
-                        <a href="draft.html">
-                            <div class="side-icon">
-                                <img src="../assets/img/icons/throw-to-paper-bin.svg" alt="">
-                            </div>
-                            <div class="side-title">
-                                Drafts <span id="dMail">30</span>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="trash.html">
-                            <div class="side-icon">
-                                <img src="../assets/img/icons/garbage.svg" alt="">
-                            </div>
-                            <div class="side-title">
-                                Trash
-                            </div>
-                        </a>    
-                    </li>
+        <!--    Side navbar or navbox   -->
+        <div class="nav-inbox">
+            <ul>
+                <!--    Close side navabar when the screen is small -->
+                <div class="close">X</div>
+                <!--    List of links to different links    -->
+                <li class="active">
 
-                    <li>
-                        <a href="signIn.html">
-                            <div class="side-icon">
-                                <img src="../assets/img/icons/logout.svg" alt="">
-                            </div>
-                            <div class="side-title">
-                                Logout
-                            </div>
-                        </a>    
-                    </li>
-                </ul>
-            </div>
-            
+                    <a href="inbox.html">
+                        <div class="side-icon">
+                            <img src="../assets/img/icons/speech-bubble.svg" alt="" class="invert">
+                        </div>  
+                        <div class="side-title">
+                            Inbox <span id="newMail">2</span>
+                        </div>
+                    </a>
+
+                </li>
+                <li>
+                    <a href="sent.html"> 
+                        <div class="side-icon">
+                            <img src="../assets/img/icons/compose.svg" alt="" class="invert">
+                        </div>
+                        <div class="side-title">
+                                Sent Mail
+                        </div>  
+                    </a>
+                </li>
+                <li>
+                    <a href="draft.html">
+                        <div class="side-icon">
+                            <img src="../assets/img/icons/throw-to-paper-bin.svg" alt="" class="invert">
+                        </div>
+                        <div class="side-title">
+                            Drafts <span id="dMail">30</span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="trash.html">
+                        <div class="side-icon">
+                            <img src="../assets/img/icons/garbage.svg" alt="" class="invert">
+                        </div>
+                        <div class="side-title">
+                            Trash
+                        </div>
+                    </a>    
+                </li>
+
+                <li>
+                    <a href="signIn.html">
+                        <div class="side-icon">
+                            <img src="../assets/img/icons/logout.svg" alt="" class="invert">
+                        </div>
+                        <div class="side-title">
+                            Logout
+                        </div>
+                    </a>    
+                </li>
+            </ul>
+        </div>
+        <!--    Table for emails    -->     
         <div class="table-inbox" id="mailBox">
              <div class="table-responsive">
                   <table>
@@ -108,6 +116,7 @@
                           <tr>
                               <th>Names</th>
                               <th>Subject</th>
+                              <th>Date</th>
                               <th>Action</th>
                           </tr>
                       </thead>
@@ -119,7 +128,10 @@
                                 </a>
                             </td>
                             <td> 
-                                <a href="readMessage.html">Reminding Something man test test test</a> 
+                                <a href="readMessage.html">Keep Trying never give up......</a> 
+                            </td>
+                            <td> 
+                                <a href="readMessage.html">9 march 2019</a> 
                             </td>
                             <td>
                                 <img src="../assets/img/icons/garbage.svg" alt="" class="trashEmail">
@@ -132,7 +144,10 @@
                                 </a>
                             </td>
                             <td> 
-                                <a href="readMessage.html">Reminding Something man test test test</a> 
+                                <a href="readMessage.html">Keep Trying never give up......</a> 
+                            </td>
+                            <td> 
+                                <a href="readMessage.html">9 march 2019</a> 
                             </td>
                             <td>
                                 <img src="../assets/img/icons/garbage.svg" alt="" class="trashEmail">
@@ -145,7 +160,10 @@
                                 </a>
                             </td>
                             <td> 
-                                <a href="readMessage.html">Reminding Something man test test test</a> 
+                                <a href="readMessage.html">Keep Trying never give up......</a> 
+                            </td>
+                            <td> 
+                                <a href="readMessage.html">9 march 2019</a> 
                             </td>
                             <td>
                                 <img src="../assets/img/icons/garbage.svg" alt="" class="trashEmail">
@@ -158,7 +176,10 @@
                                 </a>
                             </td>
                             <td> 
-                                <a href="readMessage.html">Reminding Something man test test test</a> 
+                                <a href="readMessage.html">Keep Trying never give up......</a> 
+                            </td>
+                            <td> 
+                                <a href="readMessage.html">9 march 2019</a> 
                             </td>
                             <td>
                                 <img src="../assets/img/icons/garbage.svg" alt="" class="trashEmail">
@@ -171,7 +192,10 @@
                                 </a>
                             </td>
                             <td> 
-                                <a href="readMessage.html">Reminding Something man test test test</a> 
+                                <a href="readMessage.html">Keep Trying never give up......</a> 
+                            </td>
+                            <td> 
+                                <a href="readMessage.html">9 march 2019</a> 
                             </td>
                             <td>
                                 <img src="../assets/img/icons/garbage.svg" alt="" class="trashEmail">
@@ -184,7 +208,10 @@
                                 </a>
                             </td>
                             <td> 
-                                <a href="readMessage.html">Reminding Something man test test test</a> 
+                                <a href="readMessage.html">Nothing great comes cheap.........</a> 
+                            </td>
+                            <td> 
+                                <a href="readMessage.html">9 march 2019</a> 
                             </td>
                             <td>
                                 <img src="../assets/img/icons/garbage.svg" alt="" class="trashEmail">
@@ -197,7 +224,10 @@
                                 </a>
                             </td>
                             <td> 
-                                <a href="readMessage.html">Reminding Something man test test test</a> 
+                                <a href="readMessage.html">Keep Trying never give up......</a> 
+                            </td>
+                            <td> 
+                                <a href="readMessage.html">9 march 2019</a> 
                             </td>
                             <td>
                                 <img src="../assets/img/icons/garbage.svg" alt="" class="trashEmail">
@@ -210,6 +240,6 @@
         </div>
     </div>
 
-    <script src="../js/inbox.js"></script>   
+<script src="../js/inbox.js"></script>   
 </body>
 </html> 
