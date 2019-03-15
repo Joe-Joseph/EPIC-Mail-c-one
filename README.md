@@ -51,6 +51,299 @@
  GET /api/v1/messages/:id | Read single email
  POST /api/v1/messages | Send email to individual
  DELETE /api/v1/messages/:id | Delete single email
+ 
+ **API documentation**
+ 
+POST http://localhost:4000/api/v1/auth/signup
+
+**Endpoint**
+
+```http://localhost:4000/api/v1/auth/signup```
+
+This endpoints is for creating a new user
+
+**Headers**
+
+```Content-Type	application/json```
+
+**Bodyraw** (application/json)
+
+```{
+	"firstName" : "Jonas",
+	"lastName": "Gitau",
+	"email" : "joe@gmail.com",
+	"password": "@12Gitau",
+	"confirmPassword" : "@12Gitau"
+}
+```
+
+POST http://localhost:4000/api/v1/auth/login
+
+**Endpoint**
+
+```http://localhost:4000/api/v1/auth/login```
+
+This Endpoint allow user to login
+
+**Headers**
+
+```Content-Type	application/json```
+
+**Bodyraw** (application/json)
+```{
+	"email": "john@gmail.com",
+	"password": "123456"
+}
+```
+
+GET http://localhost:4000/api/v1/messages
+
+**Enpoint**
+
+```http://localhost:4000/api/v1/messages/sent```
+
+This Endpoint is for getting all the messages
+
+**Headers**
+
+```Content-Type   application/json```
+**Bodyraw** (application/json)
+
+When there is no message you will get the following response
+with status code and message telling what happaned
+```
+{
+    "status": 400,
+    "message": "There is no sent message"
+}
+```
+When message found
+You will get the following response
+```
+{
+    "status": 200,
+    "data": [
+        {
+            "id": 1,
+            "subject": "Greetings",
+            "message": "hello!!!",
+            "parentMessageId": 1,
+            "status": "sent",
+            "createdOn": "March 15, 2019"
+        }
+    ]
+}
+```
+
+**GET** http://localhost:4000/api/v1/messages/unread
+
+**Endpoint** 
+
+```http://localhost:4000/api/v1/messages/draft```
+
+This Endpoint is for getting all unread emails
+
+**Headers**
+
+```Content-Type	`application/json```
+
+**Bodyraw** (application/json)
+
+When there is no message you will get the following response
+
+with status code and message telling what happaned
+```
+{
+    "status": 400,
+    "message": "There is unread no message"
+}
+```
+When message found
+
+You will get the following object
+```
+{
+    "status": 200,
+    "data": [
+        {
+            "id": 1,
+            "subject": "Greetings",
+            "message": "hello!!!",
+            "parentMessageId": 1,
+            "status": "unread",
+            "createdOn": "March 15, 2019"
+        }
+    ]
+}
+```
+
+**GET** http://localhost:4000/api/v1/messages/unread
+
+**Endpoint** 
+
+```http://localhost:4000/api/v1/messages/unread```
+
+Endpoint for getting all emails in draft
+
+**Headers**
+
+```Content-Type	application/json```
+
+**Bodyraw** (application/json)
+
+When there is no message you will get the following response
+
+with status code and message telling what happaned
+```
+{
+    "status": 400,
+    "message": "There is unread no message"
+}
+```
+When message found
+
+You will get the following object
+```
+{
+    "status": 200,
+    "data": [
+        {
+            "id": 1,
+            "subject": "Greetings",
+            "message": "hello!!!",
+            "parentMessageId": 1,
+            "status": "unread",
+            "createdOn": "March 15, 2019"
+        }
+    ]
+}
+```
+**GET** http://localhost:4000/api/v1/messages/draft
+
+**Endpoint**
+
+```http://localhost:4000/api/v1/messages/draft```
+
+Endpoint for getting all emails in draft
+
+**Headers**
+
+```Content-Type	application/json```
+
+**Bodyraw** (application/json)
+
+When there is no message you will get the following response
+
+with status code and message telling what happaned
+```
+{
+    "status": 400,
+    "message": "There is draft no message"
+}
+```
+When message found
+
+You will get the following object
+```
+{
+    "status": 200,
+    "data": [
+        {
+            "id": 1,
+            "subject": "Greetings",
+            "message": "hello!!!",
+            "parentMessageId": 1,
+            "status": "draft",
+            "createdOn": "March 15, 2019"
+        }
+    ]
+}
+```
+**GET** http://localhost:4000/api/v1/messages/1
+
+**Endpoint**
+http://localhost:4000/api/v1/messages/1
+
+This is an Endpoint for reading one message
+
+**Headers**
+
+``Content-Type	application/json``
+
+**Bodyraw** (application/json)
+
+When there is no message you will get the following response
+
+with status code and message telling what happaned
+```
+{
+    "status": 404,
+    "message": "Email was not found"
+}
+```
+When message found
+
+You will get the following object
+```
+{
+    "status": 200,
+    "data": [
+        {
+            "id": 1,
+            "subject": "Greetings",
+            "message": "hello!!!",
+            "parentMessageId": 1,
+            "status": "draft",
+            "createdOn": "March 15, 2019"
+        }
+    ]
+}
+```
+
+**DELETE** http://localhost:4000/api/v1/messages/1
+
+**Endpoint**
+
+```http://localhost:4000/api/v1/messages/1```
+
+This is the Endpoint for deleting one email
+
+**Headers**
+
+```Content-Type	application/json```
+
+**Bodyraw** (application/json)
+
+When there is no message you will get the following response
+
+with status code and message telling what happaned
+```
+{
+    "status": 404,
+    "message": "Email was not found"
+}
+```
+When message found
+
+You will get response of a deleted object
+```
+{
+    "status": 200,
+    "data": [
+        {
+            "id": 1,
+            "subject": "Greetings",
+            "message": "hello!!!",
+            "parentMessageId": 1,
+            "status": "draft",
+            "createdOn": "March 15, 2019"
+        }
+    ]
+}
+```
+
+
+
 
 **Technology used**
 
