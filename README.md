@@ -52,7 +52,8 @@
  POST /api/v1/messages | Send email to individual
  DELETE /api/v1/messages/:id | Delete single email
  
- **API documentation**
+ 
+ ### API documentation
  
 POST http://localhost:4000/api/v1/auth/signup
 
