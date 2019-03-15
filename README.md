@@ -69,7 +69,8 @@ This endpoints is for creating a new user
 
 **Bodyraw** (application/json)
 
-```{
+```
+{
 	"firstName" : "Jonas",
 	"lastName": "Gitau",
 	"email" : "joe@gmail.com",
