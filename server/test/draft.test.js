@@ -5,12 +5,12 @@ import app from '../Server/app'
 const { expect } = chai;
 chai.use(chaiHttp)
 
-describe('Sent-emails', () => {
-    it('Get all sent emails', () => {
+describe('Draft-emails', () => {
+    it('Get all draft emails', () => {
         chai.request(app)
-          .get('/api/v1/messages/sent')
+          .get('/api/v1/messages/draft')
           .end((err, res) => {
-              if(err){
+            if(err){
                 expect(res.body.status).to.be.equal(400)
                 expect(res.body).to.be.an('object')
               }

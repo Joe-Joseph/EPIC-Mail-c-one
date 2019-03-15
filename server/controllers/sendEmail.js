@@ -15,8 +15,10 @@ const { error } = validateMessage(req.body)
     id: messages.length + 1,
     subject: req.body.subject,
     message: req.body.message,
-    parentId: parseInt(req.body.parentId),
-    status: 'sent',
+    parentMessageId: req.body.parentMessageId,
+    senderId: req.body.senderId,
+    receiverId: req.body.receiverId,
+    status: req.body.status,
     createdOn: moment().format('LL')
   }
 

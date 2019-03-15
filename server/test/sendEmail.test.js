@@ -10,14 +10,14 @@ describe('sending-email', () => {
         chai.request(app)
         .post('/api/v1/messages')
         .send({ 
-            message: "",
-            subject: ""
+          subject: "Greetings",
+          message: "Hello",
+          status: "sent"
         })
         .end((err, res) => {
-            expect(res.body.status).to.be.equal(400)
-            expect(res.body.error).to.be.a('string')
+            expect(res.body.status).to.be.equal(200)
             expect(res.body).to.have.property('status')
-            expect(res.body).to.have.property('error')
+            expect(res.body).to.have.property('data')
             expect(res.body).to.be.an('object')
         });
     })
@@ -53,7 +53,8 @@ describe('sending-email', () => {
         .post('/api/v1/messages')
         .send({
           subject: "abde",
-          message: "abdhe"
+          message: "abdhe",
+          status: "sent"
           })
         .end((err, res) =>{
           expect(res.body.status).to.be.equal(200)
@@ -64,7 +65,6 @@ describe('sending-email', () => {
           expect(res.body.data).to.have.property('id')
           expect(res.body.data).to.have.property('subject')
           expect(res.body.data).to.have.property('message')
-          expect(res.body.data).to.have.property('parentId')
           expect(res.body.data).to.have.property('createdOn')
             
         })

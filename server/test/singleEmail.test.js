@@ -6,7 +6,7 @@ const { expect } = chai;
 chai.use(chaiHttp)
 
 describe('Read-email', () => {
-    it('Email and password should not be empty', () => {
+    it('Read one email', () => {
         chai.request(app)
           .get('/api/v1/messages/1')
           .end((err, res) => {
@@ -17,9 +17,6 @@ describe('Read-email', () => {
             expect(res.body.data).to.have.property('id')
             expect(res.body.data).to.have.property('subject')
             expect(res.body.data).to.have.property('message')
-            expect(res.body.data).to.have.property('senderId')
-            expect(res.body.data).to.have.property('receiverId')
-            expect(res.body.data).to.have.property('parentMessageId')
             expect(res.body.data).to.have.property('status')
             expect(res.body.data).to.have.property('createdOn')
             

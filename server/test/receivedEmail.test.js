@@ -10,11 +10,12 @@ describe('Received Emails', () =>{
         chai.request(app)
         .get('/api/v1/messages')
         .end((err, res) =>{
-            expect (res.body.status).to.be.equal(200);
-            expect (res.body).to.have.property('data');
-            expect (res.body).to.have.property('status');
-            expect (res.body).to.be.an('object');
-            done();
+           
+        expect (res.status).to.be.equal(200);
+        expect (res.body).to.have.property('message');
+        expect (res.body).to.have.property('status');
+        expect (res.body).to.be.an('object');
+        done();
         })
     })
 })
