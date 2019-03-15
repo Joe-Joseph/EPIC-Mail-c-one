@@ -91,7 +91,8 @@ This Endpoint allow user to login
 ```Content-Type	application/json```
 
 **Bodyraw** (application/json)
-```{
+```
+{
 	"email": "john@gmail.com",
 	"password": "123456"
 }
@@ -108,6 +109,7 @@ This Endpoint is for getting all the messages
 **Headers**
 
 ```Content-Type   application/json```
+
 **Bodyraw** (application/json)
 
 When there is no message you will get the following response
