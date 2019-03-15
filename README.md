@@ -139,13 +139,13 @@ You will get the following response
 }
 ```
 
-**GET** http://localhost:4000/api/v1/messages/unread
+**GET** http://localhost:4000/api/v1/messages/sent
 
 **Endpoint** 
 
-```http://localhost:4000/api/v1/messages/draft```
+```http://localhost:4000/api/v1/messages/sent```
 
-This Endpoint is for getting all unread emails
+This Endpoint is for getting all sent emails
 
 **Headers**
 
@@ -159,7 +159,7 @@ with status code and message telling what happaned
 ```
 {
     "status": 400,
-    "message": "There is unread no message"
+    "message": "There is no sent message"
 }
 ```
 When message found
@@ -187,7 +187,7 @@ You will get the following object
 
 ```http://localhost:4000/api/v1/messages/unread```
 
-Endpoint for getting all emails in draft
+Endpoint for getting all unread emails
 
 **Headers**
 
@@ -201,7 +201,7 @@ with status code and message telling what happaned
 ```
 {
     "status": 400,
-    "message": "There is unread no message"
+    "message": "There is no unread message"
 }
 ```
 When message found
@@ -266,6 +266,7 @@ You will get the following object
 **GET** http://localhost:4000/api/v1/messages/1
 
 **Endpoint**
+
 http://localhost:4000/api/v1/messages/1
 
 This is an Endpoint for reading one message
@@ -345,9 +346,6 @@ You will get response of a deleted object
     ]
 }
 ```
-
-
-
 
 **Technology used**
 
