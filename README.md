@@ -55,7 +55,7 @@
  
  ### API documentation
  
-1. **POST** http://localhost:4000/api/v1/auth/signup
+#### POST http://localhost:4000/api/v1/auth/signup
 
 **Endpoint**
 
@@ -79,7 +79,7 @@ This endpoints is for creating a new user
 }
 ```
 
-2. **POST** http://localhost:4000/api/v1/auth/login
+#### POST http://localhost:4000/api/v1/auth/login
 
 **Endpoint**
 
@@ -99,7 +99,7 @@ This Endpoint allow user to login
 }
 ```
 
-3. **GET** http://localhost:4000/api/v1/messages
+#### GET http://localhost:4000/api/v1/messages
 
 **Enpoint**
 
@@ -139,7 +139,7 @@ You will get the following response
 }
 ```
 
-4. **GET** http://localhost:4000/api/v1/messages/sent
+#### GET http://localhost:4000/api/v1/messages/sent
 
 **Endpoint** 
 
@@ -181,7 +181,7 @@ You will get the following object
 }
 ```
 
-5. **GET** http://localhost:4000/api/v1/messages/unread
+#### GET http://localhost:4000/api/v1/messages/unread
 
 **Endpoint** 
 
@@ -222,7 +222,7 @@ You will get the following object
     ]
 }
 ```
-6. **GET** http://localhost:4000/api/v1/messages/draft
+#### GET http://localhost:4000/api/v1/messages/draft
 
 **Endpoint**
 
@@ -263,7 +263,7 @@ You will get the following object
     ]
 }
 ```
-7. **GET** http://localhost:4000/api/v1/messages/1
+#### GET http://localhost:4000/api/v1/messages/1
 
 **Endpoint**
 
@@ -305,7 +305,7 @@ You will get the following object
 }
 ```
 
-8. **DELETE** http://localhost:4000/api/v1/messages/1
+#### DELETE http://localhost:4000/api/v1/messages/1
 
 **Endpoint**
 
