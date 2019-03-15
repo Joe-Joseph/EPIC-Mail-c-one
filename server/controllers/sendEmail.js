@@ -1,21 +1,28 @@
 import messages from '../models/messages'
 import moment from 'moment'
-// const uuid = require('uuid');
+import validateMessage from '../helpers/message-validation'
 
 const createEmail = (req, res) => {
-// res.send('Send email');
 
+  //  Error handling
+const { error } = validateMessage(req.body)
+  if (error) {
+    res.send({ status: 400, error: error.details[0].message })
+    return
+  }
+  // Create a new message
   const message = {
     id: messages.length + 1,
     subject: req.body.subject,
     message: req.body.message,
-    parentId: req.body.parentId,
+    parentId: parseInt(req.body.parentId),
     status: 'sent',
     createdOn: moment().format('LL')
   }
 
-  // console.log(message.createdOn);
+  // Add new message into the array
   messages.push(message)
+  //  Display created message to the user
   res.send({ status: 200, data: message })
 }
 
