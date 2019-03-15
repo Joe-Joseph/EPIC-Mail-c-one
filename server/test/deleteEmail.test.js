@@ -5,7 +5,7 @@ import app from '../Server/app'
 const { expect } = chai;
 chai.use(chaiHttp)
 
-describe('Unread-emails', () => {
+describe('Delete-email', () => {
     it('Get all unread emails', () => {
         chai.request(app)
           .delete('/api/v1/messages/:id')
