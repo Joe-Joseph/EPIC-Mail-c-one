@@ -8,13 +8,30 @@ chai.use(chaiHttp)
 // eslint-disable-next-line no-undef
 describe('Signup', () => {
   // eslint-disable-next-line no-undef
-  it('First name and last name length must be at least 3 characters long', () => {
+  it('First name length must be at least 3 characters long', () => {
     chai.request(app)
       .post('/api/v1/auth/signup')
       .send({ firstName: 'ab' })
       .end((err, res) => {
         expect(res.body.status).to.be.equal(400)
         expect(res.body.error).to.be.a('string')
+        expect(res.body).to.have.property('error')
+        expect(res.body).to.have.property('status')
+        expect(res.body).to.be.an('object')
+      })
+  })
+
+  it('Last name length must be at least 3 characters long', () => {
+    chai.request(app)
+      .post('/api/v1/auth/signup')
+      .send({ lastName: 'ab' })
+      .end((err, res) => {
+        expect(res.body.status).to.be.equal(400)
+        expect(res.body.error).to.be.a('string')
+        expect(res.body).to.have.property('error')
+        expect(res.body).to.have.property('status')
+        expect(res.body).to.be.an('object')
+
       })
   })
 
@@ -30,6 +47,10 @@ describe('Signup', () => {
       .end((err, res) =>{
           expect(res.body.status).to.be.equal(400)
           expect(res.body.error).to.be.a('string')
+          expect(res.body).to.have.property('error')
+          expect(res.body).to.have.property('status')
+          expect(res.body).to.be.an('object')
+
       });
   })
 
@@ -46,7 +67,10 @@ describe('Signup', () => {
       .end((err, res) =>{
         expect(res.body.status).to.be.equal(400)
         expect(res.body.error).to.be.a('string')
-          
+        expect(res.body).to.have.property('error')
+        expect(res.body).to.have.property('status')
+        expect(res.body).to.be.an('object')
+
       })
   })
 
@@ -63,6 +87,9 @@ describe('Signup', () => {
     .end((err, res) =>{
       expect(res.body.status).to.be.equal(400)
       expect(res.body.error).to.be.a('string')
+      expect(res.body).to.have.property('error')
+      expect(res.body).to.have.property('status')
+      expect(res.body).to.be.an('object')
         
     })
 })
@@ -74,6 +101,10 @@ describe('Signup', () => {
       .end((err, res) =>{
         expect(res.body.status).to.be.equal(400)
         expect(res.body.error).to.be.a('string')
+        expect(res.body).to.have.property('error')
+        expect(res.body).to.have.property('status')
+        expect(res.body).to.be.an('object')
+
       })
   })
 
@@ -88,6 +119,10 @@ describe('Signup', () => {
     .end((err, res) =>{
       expect(res.body.status).to.be.equal(400)
       expect(res.body.error).to.be.a('string')
+      expect(res.body).to.have.property('error')
+      expect(res.body).to.have.property('status')
+      expect(res.body).to.be.an('object')
+
     })
 })
 
@@ -105,7 +140,14 @@ describe('Signup', () => {
       expect(res.body.status).to.be.equal(200)
       expect(res).to.be.json
       expect(res.body.data).to.be.an('object')
-        
+      expect(res.body).to.have.property('data')
+      expect(res.body).to.have.property('status')
+      expect(res.body.data).to.have.property('firstName')
+      expect(res.body.data).to.have.property('lastName')
+      expect(res.body.data).to.have.property('email')
+      expect(res.body.data).to.have.property('id')
+      expect(res.body).to.be.an('object')
+
     })
 })
 })
