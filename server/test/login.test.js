@@ -44,17 +44,17 @@ describe('Login', () => {
         })
     })
 
-    it('Not registered', () =>{
+    it('Email must be valid', () =>{
       chai.request(app)
       .post('/api/v1/auth/login')
       .send({
         email: "test@test.com",
-        password: "abcdejkgfhh"
+        password: "abcde"
         })
       .end((err, res) =>{
         expect(res.body.status).to.be.equal(400)
         expect(res.body.error).to.be.a('string')
- 
+
       })
   })
 
@@ -66,11 +66,14 @@ describe('Login', () => {
       password: "123456"
       })
     .end((err, res) =>{
-      expect(res.body.status).to.be.equal(200)
-      expect(res.body.message).to.be.a('string')
+      if(err){
+        expect(res.body.status).to.be.equal(400)
+        expect(res.body).to.be.an('object')
+      }
+      expect(res.body.status).to.be.equal(400)
       expect(res.body).to.be.an('object')
       expect(res.body).to.have.property('status')
-      expect(res.body).to.have.property('message')
+      expect(res.body).to.have.property('error')
         
     })
 })
