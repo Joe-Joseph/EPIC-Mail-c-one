@@ -19,7 +19,7 @@ ul{
 }
 
 header{
-    background: linear-gradient(rgba(1, 0, 7, 0.9), rgba(2, 0, 8, 0.9)), url('../assets/img/email.jpg') no-repeat;
+    background: linear-gradient(rgba(1, 0, 7, 0.9), rgba(2, 0, 8, 0.72)), url('../assets/img/email.jpg') no-repeat;
     background-size: cover;
     min-height: 700px;
     color: white;
