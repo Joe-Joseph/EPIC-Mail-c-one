@@ -197,7 +197,7 @@ nav{
 
 /* Sign in page */
 .signinHeader{
-    background: linear-gradient(rgba(1, 0, 7, 0.9), rgba(2, 0, 8, 0.9)), url('../assets/img/joy.jpg') no-repeat;
+    background: linear-gradient(rgba(1, 0, 7, 0.9), rgba(2, 0, 8, 0.72)), url('../assets/img/joy.jpg') no-repeat;
     background-size: cover;
     min-height: 100hv;
     color: white;
